@@ -1,0 +1,6 @@
+<!-- ******************ehcacheÒ³Ãæ»º´æ  start******************-->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache-web</artifactId>
+		</dependency>
+		<!-- ******************ehcacheÒ³Ãæ»º´æ end -->

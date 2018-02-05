@@ -1,0 +1,8 @@
+    @Override
+	@Cacheable(key ="#root.targetClass+#root.methodName+#userId+#taskId+#caseId+#an", value="showStatisticInfoCache")
+	
+	
+	
+	
+	@Override
+	@CacheEvict(value="initMessageCache", allEntries=true)

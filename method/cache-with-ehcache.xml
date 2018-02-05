@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+	monitoring="autodetect" dynamicConfig="true">
+	<!--指定缓存文件目录-->
+	<!-- 系统临时文件目录 -->
+	<diskStore path="java.io.tmpdir" />
+
+	<defaultCache maxElementsInMemory="10000" eternal="false"
+		timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true"
+		maxElementsOnDisk="10000000" diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120" memoryStoreEvictionPolicy="LRU" />
+     
+    <!-- message 缓存欢迎页面-->
+	<cache name="initMessageCache" maxElementsInMemory="10000"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	 <!-- task 缓存任务列表-->	
+		<cache name="TaskListCache" maxElementsInMemory="10000"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		timeToIdleSeconds="144000" timeToLiveSeconds="144000"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	 <!--统计十二大项缓存页面 start  -->
+	   <cache name="showStatisticInfoCache" maxElementsInMemory="10000"
+	    timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	 <!--统计十二大项缓存页面 end  -->
+	 <!-- *********************fangdp start*********************** -->
+	  <!-- 统计十二大项中：本申请人其他申请公开-->
+	   <cache name="showOtherApplicationInfoCache" maxElementsInMemory="10000"
+	    timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+
+	 <!--统计十二大项缓存页面 start  -->
+	 
+	 <!--统计十二大项缓存页面 end  -->
+	 <!-- search start-->
+	 <!-- 检索式查询缓存 -->
+	 <cache  name="SearchStamentCache" maxElementsInMemory="10000"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		timeToIdleSeconds="144000" timeToLiveSeconds="144000"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"></cache>
+	<!-- 初始化页面缓存 -->	
+	<cache  name="InitSearchPage" maxElementsInMemory="10000"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		timeToIdleSeconds="144000" timeToLiveSeconds="144000"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"></cache>
+	<!-- 方剂检索缓存 -->
+	<cache  name="prescriptionSearch" maxElementsInMemory="10000"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		timeToIdleSeconds="144000" timeToLiveSeconds="144000"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"></cache>	
+	<!-- 药物词典查询 -->
+	<cache  name="Medicine.search" maxElementsInMemory="10000"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		timeToIdleSeconds="144000" timeToLiveSeconds="144000"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"></cache>	
+	<!-- 法律状态检索 -->
+	<cache  name="LegalStatusSearchCache" maxElementsInMemory="10000"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		timeToIdleSeconds="144000" timeToLiveSeconds="144000"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"></cache>	
+	 <!-- search end -->
+
+	 <!-- *********************fangdp start*********************** -->
+
+	 <!-- 统计十二大项中：本申请人其他申请公开-->
+	   <cache name="showImportantProposerInfoCache" maxElementsInMemory="10000"
+	    timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	  <!-- 统计十二大项中：本申请人的同族-->
+	   <cache name="showCognationInfoCache" maxElementsInMemory="10000"
+	    timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	  <!-- 显示案卷历史版本树缓存 -->
+	  <cache name="ShowCaseHistoryTreeCache" maxElementsInMemory="10000"
+	    timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	 <!-- *********************fangdp end************************* -->
+	 <!-- *********************luanhf start*********************** -->
+	 <!-- report缓存检索报告 start  -->
+	 <cache name="ReportListCache" maxElementsInMemory="10000"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU" />
+
+	 <!-- report缓存检索报告  end  -->
+
+	 <!-- metlib缓存检索报告 start  -->
+	 <cache name="MetLibListCache" maxElementsInMemory="10000"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU" />
+
+	 <!-- metlib缓存检索报告  end  -->
+	 <!-- *********************luanhf end************************* -->
+	 <!-- *********************lijing start*********************** -->
+	 <!-- task 直接登录缓存任务列表-->	
+	<cache name="ESS_TASK_METHOD_EHCACHE" timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+	maxElementsInMemory="10000" maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+	diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	<!-- task E系统登录缓存任务列表-->	
+	<cache name="EAS_TASK_METHOD_EHCACHE" timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+	maxElementsInMemory="10000" maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+	diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	<!-- task TGS系统登录缓存任务列表-->	
+	<cache name="TGS_TASK_METHOD_EHCACHE" timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+	maxElementsInMemory="10000" maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+	diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	<!-- task PCT系统登录缓存任务列表-->	
+	<cache name="PCT_TASK_METHOD_EHCACHE" timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+	maxElementsInMemory="10000" maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+	diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	<!-- factor 检索要素缓存 -->
+	<!--<cache name="TECH_METHOD_EHCACHE" timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+	maxElementsInMemory="10000" maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+	diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	--><!--<cache name="TECH_CONTENT_METHOD_EHCACHE" timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+	maxElementsInMemory="10000" maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+	diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	--><!-- classifynum 分类号关联缓存 -->
+	<cache name="CLASSIFYNUM_METHOD_EHCACHE" timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+	maxElementsInMemory="10000" maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+	diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	 <!-- *********************lijing end************************* -->
+	 <!-- *********************cyn start************************** -->
+	 
+	 <!-- *********************cyn end**************************** -->
+	 <!-- *********************zhangyh start********************** -->
+	 <!-- keyword -->
+	<cache  name="KeyWordCache" maxElementsInMemory="10000"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		timeToIdleSeconds="144000" timeToLiveSeconds="144000"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"></cache>	
+	<!-- search3 -->
+	<cache  name="search3Cache" maxElementsInMemory="10000"
+		maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+		timeToIdleSeconds="144000" timeToLiveSeconds="144000"
+		diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"></cache>	
+	 <!-- *********************zhangyh end************************ -->
+	 <!-- *********************liuhw start************************ -->
+	 
+	 <!-- *********************liuhw end************************** -->
+	 <!-- *********************liyq start************************* -->
+	 <!-- 检索历史  缓存 -->
+	 <cache name="SearchHistoryCache" timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+	maxElementsInMemory="10000" maxElementsOnDisk="10000" eternal="false" overflowToDisk="true"
+	diskSpoolBufferSizeMB="50" memoryStoreEvictionPolicy="LFU"/>
+	 <!-- *********************liyq end*************************** -->
+</ehcache>
